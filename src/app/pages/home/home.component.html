@@ -1,13 +1,14 @@
 <div class="row d-flex align-items-center justify-content-center home-container">
     <img src="../../../assets/Search d_evs.svg" alt="logo" class="image">
+
     <form [formGroup]="form" class="col-12 row d-flex justify-content-center mt-4">
-        <div class="col-9 justify-content-start">
+        <div class="col-12 col-xl-9 col-lg-9 col-md-9 justify-content-start">
             <mat-form-field appearance="outline" class="input">
                 <input matInput formControlName="usuario" placeholder="Search">
                 <mat-icon matPrefix>search</mat-icon>
             </mat-form-field>
         </div>
-        <div class="col-3">
+        <div class="col-5 col-sm-4 col-xl-3 col-lg-3 col-md-3">
             <app-button [placeholder]="'Search'" (onClick)="onSubmit()"></app-button>
         </div>
     </form>

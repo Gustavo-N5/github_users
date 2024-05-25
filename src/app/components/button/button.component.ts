@@ -12,4 +12,8 @@ export class ButtonComponent {
 
   @Output()
   onClick= new EventEmitter<void>();
+
+  onClickSubmit(){
+    this.onClick.emit();
+  }
 }
