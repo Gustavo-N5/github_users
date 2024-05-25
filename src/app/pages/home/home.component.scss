@@ -1,0 +1,18 @@
+.home-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .input{
+        width: 100%;
+    }
+
+    .image{
+        width: 500px;
+    }
+}
+:host ::ng-deep .mat-success{
+    color: #8C19D2;
+    ;
+}
