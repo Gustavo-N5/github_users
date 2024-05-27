@@ -1,12 +1,11 @@
+@import url(../../app.component.scss);
 .home-container{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    .input{
-        width: 100%;
-    }
+    
 
     .image{
         width: 500px;

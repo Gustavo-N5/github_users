@@ -12,12 +12,19 @@ import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { ButtonComponent } from './components/button/button.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { RepositoriosComponent } from './components/repositorios/repositorios.component';
+import { ExibirUsuarioComponent } from './components/exibir-usuario/exibir-usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ButtonComponent
+    ButtonComponent,
+    UsuarioComponent,
+    RepositoriosComponent,
+    ExibirUsuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,8 @@ import { ButtonComponent } from './components/button/button.component';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule
   ],
   providers: [
     provideAnimationsAsync()

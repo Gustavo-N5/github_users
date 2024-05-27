@@ -1,0 +1,56 @@
+<div class="row">
+    <!-- Dados do usuario -->
+    <div class="col-2 mr-4">
+        <img src="{{usuario.avatar_url}}" alt="avatar" class="imgem-container">
+    </div>
+    <div class="col-10 row">
+        <span class="col-12 texto-negrito">{{usuario.name}}</span>
+        <span class="col-12 texto-apagado"> {{usuario.login}}</span>
+    </div>
+    <div class="col-12 mt-3 ">
+        <span class="texto-descricao"> {{usuario.bio}}</span>
+    </div>
+
+    <!-- Seguideres e eseguindo -->
+
+    <div class="col-12 mt-3">
+        <img src="../../../assets/icons/Group, User.svg" alt="icone usuario">
+        <span class="ml-2 texto-descricao">{{usuario.followers}} seguidores</span>
+    </div>
+
+    <div class="col-12 ">
+        <img src="../../../assets/icons/heart.svg" alt="icone usuario">
+        <span class="ml-2 texto-descricao">{{usuario.following}} seguindo</span>
+    </div>
+
+    <!-- Info adicionais -->
+    <div class="row mt-4">
+        <div class="col-12" *ngIf="usuario.company != null">
+            <img src="../../../assets/icons/building-office-work-square.svg" alt="icone usuario">
+            <span class="ml-2 texto-descricao">{{usuario.company}}</span>
+        </div>
+
+        <div class="col-12" *ngIf="usuario.location != null">
+            <img src="../../../assets/icons/Pin, Location.svg" alt="icone usuario">
+            <span class="ml-2 texto-descricao">{{usuario.location}}</span>
+        </div>
+
+        <div class="col-12" *ngIf="usuario.email != null">
+            <img src="../../../assets/icons/email-mail-style-4-big.svg" alt="icone usuario">
+            <span class="ml-2 texto-descricao">{{usuario.email}}</span>
+        </div>
+
+        <div class="col-12" *ngIf="usuario.blog != null">
+            <img src="../../../assets/icons/link-angle-right.svg" alt="icone usuario">
+            <span class="ml-2 texto-descricao">{{usuario.blog}}</span>
+        </div>
+
+        <div class="col-12" *ngIf="usuario.twitter_username != null">
+            <img src="../../../assets/icons/Twitter.svg" alt="icone usuario">
+            <span class="ml-2 texto-descricao">{{usuario.twitter_username}}</span>
+        </div>
+    </div>
+    <div class="col-12 mt-5">
+        <app-button [placeholder]="'Contato'"></app-button>
+    </div>
+</div>

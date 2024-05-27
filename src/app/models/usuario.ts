@@ -1,4 +1,7 @@
+import { Repositorio } from "./repositorio";
+
 export interface Usuario {
+    login:string
     avatar_url: string;
     followers:number;
     following:number;
@@ -9,4 +12,5 @@ export interface Usuario {
     company:string;
     email:string;
     blog:string;
+    repositorios:Repositorio[];
 }
