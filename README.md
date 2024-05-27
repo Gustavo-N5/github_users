@@ -3,8 +3,8 @@
 O projeto consiste em buscar usuários por meio da API do GitHub, exibindo dados como repositórios, e-mail, nome do usuário, etc.
 
 ## Rotas
-pagina principal: http://localhost:4200/
-pagina do usuário: http://localhost:4200/usuario/nome_do_usario
+- pagina principal: http://localhost:4200/
+- pagina do usuário: http://localhost:4200/usuario/nome_do_usario
 
 ## Como Rodar? 
 ng server ou ng s
@@ -16,5 +16,5 @@ A pasta componentes contém a lógica e o layout de cada componente da aplicaç�
 O projeto foi desenvolvido utilizando Angular na versão 17, sem a utilização de módulos standalone.
 
 ## Bibliotecas usadas 
-. Angular material
-. Bootstrap
+- Angular material
+- Bootstrap
