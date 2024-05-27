@@ -1,24 +1,31 @@
-<mat-toolbar class="toolbar-container mt-3">
-    <div class="d-flex justify-contetnt-start mr-5">
-        <img src="../../../assets/Search d_evs_menor.svg" alt="">
-    </div>
-    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 d-flex justify-contetnt-center ml-5 mt-3">
-        <form [formGroup]="form" class="input">
-            <mat-form-field appearance="outline" class="input">
-                <input matInput formControlName="usuario" placeholder="Search">
-                <mat-icon matPrefix>search</mat-icon>
-            </mat-form-field>
-        </form>
-    </div>
-</mat-toolbar>
+<div *ngIf="!isErro">
+    <mat-toolbar class="toolbar-container mt-3">
+        <div class="d-flex justify-contetnt-start mr-5">
+            <img src="../../../assets/Search d_evs_menor.svg" alt="">
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 d-flex justify-contetnt-center ml-5 mt-3">
+            <form [formGroup]="form" class="input">
+                <mat-form-field appearance="outline" class="input">
+                    <input matInput formControlName="usuario" placeholder="Search">
+                    <mat-icon matPrefix>search</mat-icon>
+                </mat-form-field>
+            </form>
+        </div>
+    </mat-toolbar>
 
-<div class="row mt-5">
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 mr-5 d-flex justify-contetnt-center">
-       <app-exibir-usuario [usuario]="usuario"></app-exibir-usuario>
-    </div>
+    <div class="row mt-5">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 mr-5 d-flex justify-contetnt-center">
+            <app-exibir-usuario [usuario]="usuario"></app-exibir-usuario>
+        </div>
 
-    <div class="col-12 col-sm-12 col-md-4 col-lg-8 col-xl-8 ml-2">
-        <app-repositorios [repositorios]="usuario.repositorios"></app-repositorios>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-8 col-xl-8 ml-2">
+            <app-repositorios [repositorios]="usuario.repositorios"></app-repositorios>
+        </div>
+
     </div>
-    
+</div>
+
+<div class="row">
+    <h1 class="d-flex justify-content-center align-items-center ">Problemas para encontrar usuario</h1> 
+    <span class="texto-negrito d-flex justify-content-center align-items-center ">Você sera direcionado para a pagina de busca</span>
 </div>

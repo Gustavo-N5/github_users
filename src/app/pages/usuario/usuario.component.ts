@@ -9,16 +9,18 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './usuario.component.html',
   styleUrl: './usuario.component.scss'
 })
-export class UsuarioComponent implements OnInit{
+export class UsuarioComponent implements OnInit {
 
-  
-  constructor(private activatedRoute: ActivatedRoute, private usuarioService: UsuarioService, private formBuild: FormBuilder) {}
+
+  constructor(private activatedRoute: ActivatedRoute, private usuarioService: UsuarioService, private formBuild: FormBuilder) { }
 
   form = this.formBuild.group({
     usuario: ["", Validators.required]
   })
 
   usuario!: Usuario;
+
+  isErro!: boolean;
 
   ngOnInit(): void {
     this.buscarUsuario(this.activatedRoute.snapshot.params["user"])
@@ -28,15 +30,33 @@ export class UsuarioComponent implements OnInit{
     })
   }
 
-  buscarUsuario(_usuario:string){
+  buscarUsuario(_usuario: string) {
     // Requesição para buscar de usuario 
-    this.usuarioService.getUsuario(_usuario).subscribe((data) => { 
+    this.usuarioService.getUsuario(_usuario).subscribe((data) => {
+      this.usuario = data;
+      console.log(data)
+    }, (error) => {
+      this.isErro = true
+    });
+
+    // Requesição para busccar os repositorios
+    this.usuarioService.getRositorio(_usuario).subscribe((data) => {
+      this.usuario.repositorios = data;
+    }, (error) => {
+      this.isErro = true
+    });
+  }
+
+  buscarUsuarioEnter() {
+    const _usuario = this.form.value.usuario as string
+    // Requesição para buscar de usuario 
+    this.usuarioService.getUsuario(_usuario).subscribe((data) => {
       this.usuario = data;
       console.log(data)
     });
 
     // Requesição para busccar os repositorios
-     this.usuarioService.getRositorio(_usuario).subscribe((data) => {
+    this.usuarioService.getRositorio(_usuario).subscribe((data) => {
       this.usuario.repositorios = data;
     });
   }
