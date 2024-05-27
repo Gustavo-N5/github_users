@@ -7,7 +7,7 @@ O projeto consiste em buscar usuários por meio da API do GitHub, exibindo dados
 - pagina do usuário: http://localhost:4200/usuario/nome_do_usario
 
 ## Como Rodar? 
-ng server ou ng s
+- ng server ou ng s
 
 ## Arquitetura 
 
@@ -18,3 +18,4 @@ O projeto foi desenvolvido utilizando Angular na versão 17, sem a utilização 
 ## Bibliotecas usadas 
 - Angular material
 - Bootstrap
+- Ngx Spinner (npm i ngx-spinner)

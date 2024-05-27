@@ -3,6 +3,7 @@ import { Usuario } from '../../models/usuario';
 import { ActivatedRoute } from '@angular/router';
 import { UsuarioService } from '../../services/usuario/usuario.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-usuario',
@@ -12,7 +13,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class UsuarioComponent implements OnInit {
 
 
-  constructor(private activatedRoute: ActivatedRoute, private usuarioService: UsuarioService, private formBuild: FormBuilder) { }
+  constructor(private activatedRoute: ActivatedRoute, private usuarioService: UsuarioService, private formBuild: FormBuilder, private spinner: NgxSpinnerService) { }
 
   form = this.formBuild.group({
     usuario: ["", Validators.required]
@@ -31,6 +32,7 @@ export class UsuarioComponent implements OnInit {
   }
 
   buscarUsuario(_usuario: string) {
+    this.spinner.show()
     // Requesição para buscar de usuario 
     this.usuarioService.getUsuario(_usuario).subscribe((data) => {
       this.usuario = data;
@@ -45,9 +47,11 @@ export class UsuarioComponent implements OnInit {
     }, (error) => {
       this.isErro = true
     });
+    this.spinner.hide()
   }
 
   buscarUsuarioEnter() {
+    this.spinner.show()
     const _usuario = this.form.value.usuario as string
     // Requesição para buscar de usuario 
     this.usuarioService.getUsuario(_usuario).subscribe((data) => {
@@ -59,6 +63,7 @@ export class UsuarioComponent implements OnInit {
     this.usuarioService.getRositorio(_usuario).subscribe((data) => {
       this.usuario.repositorios = data;
     });
+    this.spinner.hide
   }
 
 }

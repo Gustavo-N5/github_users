@@ -16,6 +16,7 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { RepositoriosComponent } from './components/repositorios/repositorios.component';
 import { ExibirUsuarioComponent } from './components/exibir-usuario/exibir-usuario.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ExibirUsuarioComponent } from './components/exibir-usuario/exibir-usuar
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    NgxSpinnerModule
   ],
   providers: [
     provideAnimationsAsync()
