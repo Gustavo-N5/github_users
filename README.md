@@ -6,8 +6,14 @@ O projeto consiste em buscar usuários por meio da API do GitHub, exibindo dados
 - pagina principal: http://localhost:4200/
 - pagina do usuário: http://localhost:4200/usuario/nome_do_usario
 
-## Como Rodar? 
-- ng server ou ng s
+## Versões 
+- versão utilizada do Angular: 17.3.0
+- versão do Node: 18.14.2
+
+## Como rodar:
+- ng server
+    #### Dependencias externas 
+    - Ngx Spinner (npm i ngx-spinner):
 
 ## Arquitetura 
 
@@ -16,6 +22,6 @@ A pasta componentes contém a lógica e o layout de cada componente da aplicaç�
 O projeto foi desenvolvido utilizando Angular na versão 17, sem a utilização de módulos standalone.
 
 ## Bibliotecas usadas 
-- Angular material
-- Bootstrap
-- Ngx Spinner (npm i ngx-spinner)
+- Angular material: Foi utilizado angular material, tanto por ser nativo do Angular como pela facilidade de usar seus componentes 
+- Bootstrap: Utilizei o Bootstrap, pois tenho bastante dominio com ele, alem de ajudar bastante para deixar o site responsivo
+- Ngx Spinner (npm i ngx-spinner): Utilizei essa Lib externa para me axuliar na tela de carregamento, com intuito de facilitar o desenvolvimento e entregar layouts prontos para serem usados

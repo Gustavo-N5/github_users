@@ -13,4 +13,5 @@ export interface Usuario {
     email:string;
     blog:string;
     repositorios:Repositorio[];
+    html_url:string;
 }

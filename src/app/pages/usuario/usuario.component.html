@@ -4,7 +4,7 @@
             <img src="../../../assets/Search d_evs_menor.svg" alt="">
         </div>
         <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 d-flex justify-contetnt-center ml-5 mt-3">
-            <form [formGroup]="form" class="input">
+            <form [formGroup]="form" class="input" (keyup.enter)="buscarUsuario()">
                 <mat-form-field appearance="outline" class="input">
                     <input matInput formControlName="usuario" placeholder="Search">
                     <mat-icon matPrefix>search</mat-icon>
@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row" *ngIf="isErro">
     <h1 class="d-flex justify-content-center align-items-center ">Problemas para encontrar usuario</h1> 
     <span class="texto-negrito d-flex justify-content-center align-items-center ">Você sera direcionado para a pagina de busca</span>
 </div>

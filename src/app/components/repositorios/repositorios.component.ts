@@ -14,4 +14,8 @@ export class RepositoriosComponent implements OnInit {
 
   }
 
+  abrirRepositorio(index: number){
+    window.open(this.repositorios[index].html_url)
+  }
+
 }

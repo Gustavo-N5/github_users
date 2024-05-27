@@ -13,7 +13,7 @@ import { timer } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private formBuild: FormBuilder, private usuarioService: UsuarioService, private rota: Router) { }
+  constructor(private formBuild: FormBuilder, private rota: Router) { }
 ;
 
   form = this.formBuild.group({
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
 
     const _usuario = this.form.value.usuario as string;
     
-    this.rota.navigate([`/usuario/${_usuario}`])
+    this.rota.navigate([`/perfil/${_usuario}`])
 
   }
 }

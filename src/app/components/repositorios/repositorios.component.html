@@ -1,5 +1,5 @@
 @for (repositorio of repositorios; track $index) {
-<div class="row">
+<div class="row link" (click)="abrirRepositorio($index)">
     <span class="texto-negrito">{{repositorio.name}}</span>
     <span class="texto-descricao mt-2">{{repositorio.description}}</span>
     <div class="row mt-3">
